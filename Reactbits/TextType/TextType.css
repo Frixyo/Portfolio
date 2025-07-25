@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'figtree';
+  src: url('../../fonts/Figtree-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.text-type {
+  position : absolute;
+  display: inline-block;
+  white-space: pre-wrap;
+  font-family: figtree;
+  font-size: 32px;
+  width: 25%;
+  padding-top: 10%;
+  padding-left: 5%;
+}
+
+.text-type__cursor {
+  display: inline-block;
+  opacity: 1;
+}
+
+.text-type__cursor--hidden {
+  display: none;
+}

@@ -1,56 +1,32 @@
-import { useState } from 'react'
-import Spline from '@splinetool/react-spline'
-
+import Keyboard from "./Keyboard";
+import DarkVeil from "../Reactbits/DarkVeil/DarkVeil";
+import TextType from '../Reactbits/TextType/TextType';
 
 function App() {
-  const [message, setMessage] = useState('Aucun clic détecté')
-
-  function handleSplineMouseUp(e) {
-    console.log('Event reçu:', e.target.name, e.target.id)
-    setMessage(`Objet cliqué : ${e.target.name}`)
-
-
-    if (e.target.id == 'a5c5d194-53e6-4206-ac02-5000aa34f6e0') {
-      window.open("CV-RIGHELEClément-ETS.pdf", "_blank");
-    }
-
-    if (e.target.id == 'a2a453d5-d23b-4447-a09a-885ee99b91f0') {
-      window.open("https://www.linkedin.com/in/cl%C3%A9ment-righele/", "_blank");
-    }
-
-    if (e.target.id == '85e2fbad-9b63-4f63-824f-056102ee7f1c') {
-      // Hire me button
-    }
-    
-    if (e.target.id == '85e2fbad-9b63-4f63-824f-056102ee7f1c') {
-      // Connaissance button
-    }
-
-    if (e.target.id == '85e2fbad-9b63-4f63-824f-056102ee7f1c') {
-      // About me button
-    }
-
-    if (e.target.id == '85e2fbad-9b63-4f63-824f-056102ee7f1c') {
-      // Game button
-    }
-
-    if (e.target.id == '85e2fbad-9b63-4f63-824f-056102ee7f1c') {
-      // Work button
-    }
-
-    if (e.target.id == '74ebb245-6386-400e-9c12-0b4efb53b933') {
-      window.open("https://github.com/frixyo", "_blank");
-    }
-  }
-
   return (
-    <main style={{ width: '100vw', height: '100vh' }}>
-      <Spline
-        scene="https://prod.spline.design/XhoffCB6c3sDnGNr/scene.splinecode"
-        onSplineMouseUp={handleSplineMouseUp}
+    <main style={{ position: 'relative', width: '100vw', height: '100vh' }}>
+      <div className="title">
+        <span className="label1">designer</span>
+        <span className="name">Clément Righele</span>
+        <span className="label2">&lt;coder&gt;</span>
+      </div>
+      
+      <TextType 
+        text={[
+          "Bienvenue sur mon portfolio !",
+          "Je suis Clément Righele Développeur en génie logiciel !",
+          "Cliquez sur les touches du clavier pour interagir avec le site !"
+        ]}
+        typingSpeed={75}
+        pauseDuration={2500}
+        showCursor={true}
+        cursorCharacter="|"
       />
+
+      <Keyboard />
+      <DarkVeil />
     </main>
-  )
+  );
 }
 
 export default App;
