@@ -36,7 +36,7 @@ button:focus-visible {
 
 @font-face {
   font-family: 'figtree';
-  src: url('../../fonts/Figtree-Medium.ttf') format('truetype');
+  src: url('/fonts/Figtree-Medium.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
