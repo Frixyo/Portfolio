@@ -37,7 +37,6 @@ function Keyboard({ setActiveModal }) {
 
     function handleSplineMouseUp(e) {
       const id = e.target.id
-      console.log('MouseUp ID:', id)
       modalMap[id]?.()
     }
 
@@ -58,6 +57,12 @@ function Keyboard({ setActiveModal }) {
         f: '6e7eb177-5c49-47e0-911b-6e46b360f192',      // Game
         w: '82a8c17a-395f-40a4-b63d-09d1b86a8818',      // Work
         g: '74ebb245-6386-400e-9c12-0b4efb53b933',      // GitHub
+      }
+
+      console.log('keyup', { key: e.key, code: e.code, keyCode: e.keyCode, target: e.target?.tagName });
+      if (e.key === 'Backspace' || e.key === 'Delete' || e.keyCode === 8) {
+        setActiveModal(null) // on ferme le modal
+        return
       }
 
       const id = keyMap[e.key]

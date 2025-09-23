@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import Keyboard from "./Keyboard";
+import Commande from "./Commande";
 import DarkVeil from "../Reactbits/DarkVeil/DarkVeil";
 import TextType from '../Reactbits/TextType/TextType';
 import ModalAboutMe from './modal/AboutMe/ModalAboutMe';
@@ -43,6 +44,7 @@ const [activeModal, setActiveModal] = useState(null);
       />
       <Keyboard setActiveModal={setActiveModal}/>
       <DarkVeil />
+      <Commande />
     </main>
   );
 }
