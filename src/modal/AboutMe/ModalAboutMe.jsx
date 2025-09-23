@@ -39,7 +39,7 @@ function ModalAboutMe({ isVisible, onClose }) {
               <li>Je suis légèrement accro aux réseaux sociaux</li>
               <li>J'ai une très bonne mémoire</li>
               <li>J'adore me casser la tête avec des problèmes</li>
-              <li>J'aime cuisiner (et manger)</li>
+              <li>Addict à Clash Royale</li>
             </ul>
           </div>
           <div className="part3">

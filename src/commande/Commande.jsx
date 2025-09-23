@@ -1,18 +1,39 @@
 import './commande.css'
 
-function Commande() {
+function Commande({ currentLang }) {
+
+  const commands = currentLang === 'fr'
+    ? [
+        ['Esc', 'CV'],
+        ['L', 'Linkedin'],
+        ['Entrée', 'Hire Me'],
+        ['S', 'Skills'],
+        ['A', 'About Me'],
+        ['F', 'Game'],
+        ['W', 'Work'],
+        ['G', 'GitHub'],
+        ['Supprimer', 'Fermer le modal'],
+      ]
+    : [
+        ['Esc', 'Resume'],
+        ['L', 'Linkedin'],
+        ['Enter', 'Hire Me'],
+        ['S', 'Skills'],
+        ['A', 'About Me'],
+        ['F', 'Game'],
+        ['W', 'Work'],
+        ['G', 'GitHub'],
+        ['Delete', 'Close modal'],
+      ]
+
   return (
-    <div className='commande'>
-        <div><b>Commandes Clavier</b></div>
-        <div><b>Esc</b> : CV</div>
-        <div><b>L</b> : Linkedin</div>
-        <div><b>Entrée</b> : Hire Me</div>
-        <div><b>S</b> : Skills</div>
-        <div><b>A</b> : About Me</div>
-        <div><b>F</b> : Game</div>
-        <div><b>W</b> : Work</div>
-        <div><b>G</b> : GitHub</div>
-        <div><b>Supprimer</b> : Fermer le modal</div>
+    <div className="commande">
+      <div><b>{currentLang === 'fr' ? 'Commandes Clavier' : 'Keyboard Commands'}</b></div>
+      {commands.map(([key, action]) => (
+        <div key={key}>
+          <b>{key}</b> : {action}
+        </div>
+      ))}
     </div>
   )
 }

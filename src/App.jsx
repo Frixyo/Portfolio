@@ -2,6 +2,8 @@ import { useState } from "react";
 
 import Keyboard from "./Keyboard";
 import Commande from "./commande/Commande";
+import LangButton from "./langbutton/LangButton";
+
 import DarkVeil from "../Reactbits/DarkVeil/DarkVeil";
 import TextType from '../Reactbits/TextType/TextType';
 import ModalAboutMe from './modal/AboutMe/ModalAboutMe';
@@ -14,6 +16,7 @@ import ModalHireMe from './modal/HireMe/ModalHireMe';
 function App() {
 
 const [activeModal, setActiveModal] = useState(null);
+const [currentLang, setCurrentLang] = useState('fr')
 
   return (
     <main style={{ position: 'relative', width: '100vw', height: '100vh' }}>
@@ -29,22 +32,35 @@ const [activeModal, setActiveModal] = useState(null);
         <span className="name">Clément Righele</span>
         <span className="label2">designer</span>
       </div>
+
       
     
-      <TextType 
-        text={[
-          "Bienvenue sur mon portfolio !",
-          "Je suis Clément Righele Développeur en génie logiciel !",
-          "Cliquez sur les touches du clavier pour interagir avec le site !"
-        ]}
-        typingSpeed={75}
+      <TextType
+        text={currentLang === 'fr'
+          ? [
+              "<h1>Bienvenue sur mon portfolio !</h1>",
+              "<p>Je suis Clément Righele, Développeur en génie logiciel !</p>",
+              "<p>Cliquez sur les touches du clavier pour interagir avec le site !</p>"
+            ]
+          : [
+              "<h1>Welcome to my portfolio!</h1>",
+              "<p>I am Clément Righele, Software Engineer!</p>",
+              "<p>Click on the keyboard keys to interact with the site!</p>"
+            ]
+        }
+        typingSpeed={85}
         pauseDuration={2500}
         showCursor={true}
         cursorCharacter="|"
       />
+
       <Keyboard setActiveModal={setActiveModal}/>
       <DarkVeil />
-      <Commande />
+      <Commande currentLang={currentLang} />
+      <LangButton
+        currentLang={currentLang}
+        onChangeLang={setCurrentLang}
+      />
     </main>
   );
 }

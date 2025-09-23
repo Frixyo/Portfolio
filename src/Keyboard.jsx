@@ -6,10 +6,10 @@ function Keyboard({ setActiveModal }) {
 
   const modalMap = {
     // CV
-    'a5c5d194-53e6-4206-ac02-5000aa34f6e0': () => window.open('CV-RIGHELEClément-ETS.pdf', '_blank'),
+    'a5c5d194-53e6-4206-ac02-5000aa34f6e0': () => window.open('CV-RIGHELEClément-ETS.pdf', '_blank', 'noopener noreferrer'),
 
     // Linkedin
-    'a2a453d5-d23b-4447-a09a-885ee99b91f0': () => window.open('https://www.linkedin.com/in/cl%C3%A9ment-righele/', '_blank'),
+    'a2a453d5-d23b-4447-a09a-885ee99b91f0': () => window.open('https://www.linkedin.com/in/cl%C3%A9ment-righele/', '_blank', 'noopener noreferrer'),
 
     // Hire Me
     '85e2fbad-9b63-4f63-824f-056102ee7f1c': () => setActiveModal('hire'),
@@ -27,7 +27,7 @@ function Keyboard({ setActiveModal }) {
     '82a8c17a-395f-40a4-b63d-09d1b86a8818': () => setActiveModal('work'),
 
     // GitHub
-    '74ebb245-6386-400e-9c12-0b4efb53b933': () => window.open('https://github.com/frixyo', '_blank'),
+    '74ebb245-6386-400e-9c12-0b4efb53b933': () => window.open('https://github.com/frixyo', '_blank', 'noopener noreferrer'),
   }
 
   // Gestion clics souris
@@ -59,7 +59,6 @@ function Keyboard({ setActiveModal }) {
         g: '74ebb245-6386-400e-9c12-0b4efb53b933',      // GitHub
       }
 
-      console.log('keyup', { key: e.key, code: e.code, keyCode: e.keyCode, target: e.target?.tagName });
       if (e.key === 'Backspace' || e.key === 'Delete' || e.keyCode === 8) {
         setActiveModal(null) // on ferme le modal
         return
