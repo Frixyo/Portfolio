@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import Keyboard from "./Keyboard";
-import Commande from "./Commande";
+import Commande from "./commande/Commande";
 import DarkVeil from "../Reactbits/DarkVeil/DarkVeil";
 import TextType from '../Reactbits/TextType/TextType';
 import ModalAboutMe from './modal/AboutMe/ModalAboutMe';
@@ -25,9 +25,9 @@ const [activeModal, setActiveModal] = useState(null);
       {activeModal === 'hire' && <ModalHireMe isVisible={true} onClose={() => setActiveModal(null)} />}
 
       <div className="title">
-        <span className="label1">designer</span>
+        <span className="label1">&lt;coder&gt;</span>
         <span className="name">Clément Righele</span>
-        <span className="label2">&lt;coder&gt;</span>
+        <span className="label2">designer</span>
       </div>
       
     

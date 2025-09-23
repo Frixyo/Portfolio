@@ -79,7 +79,7 @@ function Keyboard({ setActiveModal }) {
     <Spline
       scene="https://prod.spline.design/XhoffCB6c3sDnGNr/scene.splinecode"
       ref={splineRef}
-      style={{ width: '100%', height: '100%', position: 'relative', zIndex: 100 }}
+      style={{ width: '100%', height: '90%', position: 'relative', zIndex: 100 }}
     />
   )
 }

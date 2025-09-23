@@ -3,7 +3,7 @@ import './commande.css'
 function Commande() {
   return (
     <div className='commande'>
-        <div>Commandes Clavier</div>
+        <div><b>Commandes Clavier</b></div>
         <div><b>Esc</b> : CV</div>
         <div><b>L</b> : Linkedin</div>
         <div><b>Entrée</b> : Hire Me</div>
