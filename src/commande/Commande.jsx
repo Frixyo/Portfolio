@@ -10,7 +10,7 @@ function Commande({ currentLang }) {
         ['S', 'Skills'],
         ['A', 'About Me'],
         ['F', 'Game'],
-        ['W', 'Work'],
+        ['W', 'Works'],
         ['G', 'GitHub'],
         ['Supprimer', 'Fermer le modal'],
       ]
@@ -21,7 +21,7 @@ function Commande({ currentLang }) {
         ['S', 'Skills'],
         ['A', 'About Me'],
         ['F', 'Game'],
-        ['W', 'Work'],
+        ['W', 'Works'],
         ['G', 'GitHub'],
         ['Delete', 'Close modal'],
       ]
