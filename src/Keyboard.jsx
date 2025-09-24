@@ -6,7 +6,7 @@ function Keyboard({ setActiveModal }) {
 
   const modalMap = {
     // CV
-    'a5c5d194-53e6-4206-ac02-5000aa34f6e0': () => window.open('CV-RIGHELEClément-ETS.pdf', '_blank', 'noopener noreferrer'),
+    'a5c5d194-53e6-4206-ac02-5000aa34f6e0': () => window.open('CV-Righele.pdf', '_blank'),
 
     // Linkedin
     'a2a453d5-d23b-4447-a09a-885ee99b91f0': () => window.open('https://www.linkedin.com/in/cl%C3%A9ment-righele/', '_blank', 'noopener noreferrer'),
