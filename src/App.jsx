@@ -25,7 +25,7 @@ const [currentLang, setCurrentLang] = useState('fr')
       {activeModal === 'work' && <ModalWork isVisible={true} onClose={() => setActiveModal(null)} />}
       {activeModal === 'skills' && <ModalSkills isVisible={true} onClose={() => setActiveModal(null)} />}
       {activeModal === 'game' && <ModalGame isVisible={true} onClose={() => setActiveModal(null)} />}
-      {activeModal === 'hire' && <ModalHireMe isVisible={true} onClose={() => setActiveModal(null)} />}
+      {activeModal === 'hire' && <ModalHireMe isVisible={true} onClose={() => setActiveModal(null)} currentLang={currentLang} />}
 
       <div className="title">
         <span className="label1">&lt;coder&gt;</span>
@@ -54,7 +54,7 @@ const [currentLang, setCurrentLang] = useState('fr')
         cursorCharacter="|"
       />
 
-      <Keyboard setActiveModal={setActiveModal}/>
+      <Keyboard activeModal={activeModal} setActiveModal={setActiveModal} />
       <DarkVeil />
       <Commande currentLang={currentLang} />
       <LangButton

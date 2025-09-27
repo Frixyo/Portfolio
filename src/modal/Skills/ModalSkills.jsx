@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from "motion/react";
 import "./ModalSkills.css";
+import SkillsGraph from "./Skillsgraph";
 
 function ModalSkills({ isVisible, onClose }) {
   function handleBackdropClick(e) {
@@ -27,6 +28,8 @@ function ModalSkills({ isVisible, onClose }) {
           >
           <button className="close-button" onClick={onClose}>✕</button>
           <h1>Skills</h1>
+          <SkillsGraph/>
+
 
           </motion.div>
         </motion.div>

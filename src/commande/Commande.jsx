@@ -12,7 +12,6 @@ function Commande({ currentLang }) {
         ['F', 'Game'],
         ['W', 'Works'],
         ['G', 'GitHub'],
-        ['Supprimer', 'Fermer le modal'],
       ]
     : [
         ['Esc', 'Resume'],
@@ -23,7 +22,6 @@ function Commande({ currentLang }) {
         ['F', 'Game'],
         ['W', 'Works'],
         ['G', 'GitHub'],
-        ['Delete', 'Close modal'],
       ]
 
   return (

@@ -1,12 +1,12 @@
 import { useRef, useEffect } from 'react'
 import Spline from '@splinetool/react-spline'
 
-function Keyboard({ setActiveModal }) {
+function Keyboard({ activeModal, setActiveModal }) {
   const splineRef = useRef(null)
 
   const modalMap = {
     // CV
-    'a5c5d194-53e6-4206-ac02-5000aa34f6e0': () => window.open('CV-Righele.pdf', '_blank'),
+    'a5c5d194-53e6-4206-ac02-5000aa34f6e0': () => window.open('CV-Righele.pdf', '_blank', 'noopener noreferrer'),
 
     // Linkedin
     'a2a453d5-d23b-4447-a09a-885ee99b91f0': () => window.open('https://www.linkedin.com/in/cl%C3%A9ment-righele/', '_blank', 'noopener noreferrer'),
@@ -49,7 +49,6 @@ function Keyboard({ setActiveModal }) {
     function handleKeyUp(e) {
 
       const keyMap = {
-        Escape: 'a5c5d194-53e6-4206-ac02-5000aa34f6e0', // CV 
         l: 'a2a453d5-d23b-4447-a09a-885ee99b91f0',      // Linkedin
         Enter: '85e2fbad-9b63-4f63-824f-056102ee7f1c',  // Hire Me
         s: '031eeb0d-6869-4915-a4e0-e3066a09bca3',      // Skills
@@ -59,10 +58,16 @@ function Keyboard({ setActiveModal }) {
         g: '74ebb245-6386-400e-9c12-0b4efb53b933',      // GitHub
       }
 
-      if (e.key === 'Backspace' || e.key === 'Delete' || e.keyCode === 8) {
-        setActiveModal(null) // on ferme le modal
+      if (e.key === 'Escape') {
+        if (activeModal) {
+          setActiveModal(null)
+        } else {
+          modalMap['a5c5d194-53e6-4206-ac02-5000aa34f6e0']?.()
+        }
         return
       }
+
+      if (activeModal) return
 
       const id = keyMap[e.key]
       if (id) {
@@ -72,7 +77,7 @@ function Keyboard({ setActiveModal }) {
 
     window.addEventListener('keyup', handleKeyUp)
     return () => window.removeEventListener('keyup', handleKeyUp)
-  }, [setActiveModal])
+  }, [activeModal, setActiveModal])
 
   return (
     <Spline

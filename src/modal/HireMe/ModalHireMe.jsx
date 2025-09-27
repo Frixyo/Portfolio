@@ -1,7 +1,8 @@
 import { AnimatePresence, motion } from "motion/react";
 import "./ModalHireMe.css";
+import Form from "./Form.jsx";
 
-function ModalHireMe({ isVisible, onClose }) {
+function ModalHireMe({ isVisible, onClose, currentLang}) {
   function handleBackdropClick(e) {
     if (e.target === e.currentTarget) {
       onClose();
@@ -26,8 +27,8 @@ function ModalHireMe({ isVisible, onClose }) {
             transition={{ duration: 0.3 }}
           >
           <button className="close-button" onClick={onClose}>✕</button>
-          <h1>Hire me</h1>       
-
+          {currentLang === 'fr' ? <h1>Contacter moi</h1> : <h1>Contact me</h1>}
+          <Form currentLang={currentLang} />
           </motion.div>
         </motion.div>
       )}
