@@ -68,3 +68,10 @@
   align-items: center;
   justify-content: center;
 }
+
+
+.form label.error-label  {
+  color: red;
+  font-weight: bold;
+  font-size: 12px;
+}

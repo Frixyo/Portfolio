@@ -8,10 +8,21 @@ export default function Form({currentLang}) {
     lang = 1;
   }
 
-  const commands = [
-        ['Nom', 'Name'],
+  const [errorNameEmpty, setErrorNameEmpty] = useState("")
+  const [errorMailInvalid, setMailInvalid] = useState("")
+  const [errorMailEmpty, setErrorMailEmpty] = useState("")
+  const [errorMessageEmpty, setErrorMessageEmpty] = useState("")
+  
+  const traduction = [
+        ['Nom Prénom', 'Last Name First Name'],
         ['Société', 'Company'],
         ['Votre Message', 'Your Message'],
+        ['Envoyer', 'Send'],
+        ['Envoyer un mail', 'Send an email'],
+        ['Nom vide !', 'Name empty!'],
+        ['Email vide !', 'Email empty!'],
+        ['Email invalide !', 'Invalid email!'],
+        ['Message vide !', 'Message empty!'],
       ]
       
   const [formData, setFormData] = useState({
@@ -27,6 +38,7 @@ export default function Form({currentLang}) {
   };
 
   function sendEmail() {
+    if (formData.name && formData.email && /\S+@\S+\.\S+/.test(formData.email) && formData.message) {
     emailjs.send("service_2ff5hyx","template_129uuum",{
       title: "Portfolio Contact",
       name: formData.name,
@@ -36,6 +48,16 @@ export default function Form({currentLang}) {
     }, 'Y84FHvqCNJU87xz5l')
     .then(() => alert("Email envoyé !"))
     .catch(err => console.error("Erreur :", err));
+    } else {
+      if (!formData.name) setErrorNameEmpty(traduction[5][lang])
+      else setErrorNameEmpty("")
+      if (!formData.email) setErrorMailEmpty(traduction[6][lang]) 
+      else setErrorMailEmpty("")
+      if (formData.email && !/\S+@\S+\.\S+/.test(formData.email)) setMailInvalid(traduction[7][lang]) 
+      else setMailInvalid("")
+      if (!formData.message) setErrorMessageEmpty(traduction[8][lang]) 
+      else setErrorMessageEmpty("")
+    }
   }
 
 
@@ -45,14 +67,15 @@ export default function Form({currentLang}) {
       {/* Formulaire */}
       <form className="form" id="myForm" onSubmit={(e) => { e.preventDefault(); sendEmail(); }}>
         <label>
-          {commands[0][lang]}
+          {traduction[0][lang]}
           <input
             type="text"
-            placeholder={commands[0][lang]}
+            placeholder={traduction[0][lang]}
             name="name"
             value={formData.name}
             onChange={handleChange}
           />
+          <label id="nameLabel" className={errorNameEmpty ? "error-label" : ""}> {errorNameEmpty || ""} </label>
         </label>
 
         <label>
@@ -64,14 +87,16 @@ export default function Form({currentLang}) {
             value={formData.email}
             onChange={handleChange}
           />
+          <label id="emailLabel" className={errorMailInvalid ? "error-label" : ""}> {errorMailInvalid || ""} </label>
+          <label id="emailLabel" className={errorMailEmpty ? "error-label" : ""}> {errorMailEmpty || ""} </label>
         </label>
 
         <label>
-          {commands[1][lang]}
+          {traduction[1][lang]}
           <input
             type="text"
             name="company"
-            placeholder={commands[1][lang]}
+            placeholder={traduction[1][lang]}
             value={formData.company}
             onChange={handleChange}
           />
@@ -81,10 +106,11 @@ export default function Form({currentLang}) {
           Message
           <textarea
             name="message"
-            placeholder={commands[2][lang]}
+            placeholder={traduction[2][lang]}
             value={formData.message}
             onChange={handleChange}
           />
+          <label id="messageLabel" className={errorMessageEmpty ? "error-label" : ""}> {errorMessageEmpty || ""} </label>
         </label>
       </form>
 
@@ -105,11 +131,11 @@ export default function Form({currentLang}) {
         )}
       </pre>
 
-      <button type="submit" form="myForm" className="submit-button">Envoyer</button>
+      <button type="submit" form="myForm" className="submit-button">{traduction[3][lang]}</button>
     </div>
     
     <div className="form-contact">
-      <a href="mailto:clem.righ@gmail.com">Envoyer un mail</a>
+      <a href="mailto:clem.righ@gmail.com">{traduction[4][lang]}</a>
     </div>
     
 
