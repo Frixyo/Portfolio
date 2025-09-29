@@ -40,12 +40,14 @@ const [currentLang, setCurrentLang] = useState('fr')
           ? [
               "<h1>Bienvenue sur mon portfolio !</h1>",
               "<p>Je suis Clément Righele, Développeur en génie logiciel !</p>",
-              "<p>Cliquez sur les touches du clavier pour interagir avec le site !</p>"
+              "<p>Cliquez sur les touches du clavier pour interagir avec le site !</p>",
+              "<p>Mon Portfolio n'est pas encore fini, je le complèterai le plus vite possible.</p>"
             ]
           : [
               "<h1>Welcome to my portfolio!</h1>",
               "<p>I am Clément Righele, Software Engineer!</p>",
-              "<p>Click on the keyboard keys to interact with the site!</p>"
+              "<p>Click on the keyboard keys to interact with the site!</p>",
+              "<p>My Portfolio is not finished yet, I will complete it as soon as possible.</p>"
             ]
         }
         typingSpeed={85}
