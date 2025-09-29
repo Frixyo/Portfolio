@@ -1,12 +1,33 @@
-# React + Vite
+# 🌐 Portfolio - Clément Righele
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bienvenue sur mon **portfolio personnel** !  
+Ce site a pour but de présenter mes projets, mes compétences et mon parcours en tant qu’étudiant en génie logiciel.  
+Il est développé avec **React + Vite**, et déployé via **GitHub Pages** sur [clementrighele.dev](https://clementrighele.dev).
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Technologies utilisées
 
-## Expanding the ESLint configuration
+- [React](https://react.dev/) – bibliothèque JavaScript pour créer l’interface
+- [Vite](https://vitejs.dev/) – outil de build ultra-rapide
+- [GSAP](https://gsap.com/) – animations fluides
+- [Spline](https://spline.design/) – intégration 3D
+- [gh-pages](https://www.npmjs.com/package/gh-pages) – déploiement sur GitHub Pages
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🎹 Présentation
+
+Ce portfolio se présente sous la forme d’un **clavier interactif**.  
+- En cliquant sur certaines touches, tu peux accéder directement à des pages externes comme mon **CV**, mon **LinkedIn** ou mon **GitHub**.  
+- D’autres touches ouvrent des **pop-ups** contenant des informations supplémentaires sur mon parcours, mes projets et mes compétences.  
+
+L’objectif est de proposer une expérience originale et interactive pour découvrir mon profil.
+
+
+### 🛠️ TODO
+
+- [ ] **Contact Me** : vérifier que le formulaire est valide et fonctionnel.  
+- [ ] **About Me, Skills, Work & Game** : créer et mettre en forme ces sections.  
+- [ ] **Responsive Design** : adapter l’interface pour tous les formats d’écrans (PC, tablette, mobile).  
+
