@@ -1,7 +1,8 @@
 import { AnimatePresence, motion } from "motion/react";
 import "./ModalSkills.css";
+import Skills from "./Skills";
 
-function ModalSkills({ isVisible, onClose }) {
+function ModalSkills({ isVisible, onClose, currentLang}) {
   function handleBackdropClick(e) {
     if (e.target === e.currentTarget) {
       onClose();
@@ -26,8 +27,9 @@ function ModalSkills({ isVisible, onClose }) {
             transition={{ duration: 0.3 }}
           >
           <button className="close-button" onClick={onClose}>✕</button>
-          <h1>Skills</h1>
 
+          {currentLang === 'fr' ? <h1>Mes compétences</h1> : <h1>My skills</h1>}
+          <Skills currentLang={currentLang} />
 
           </motion.div>
         </motion.div>

@@ -23,7 +23,7 @@ const [currentLang, setCurrentLang] = useState('fr')
 
       {activeModal === 'about' && <ModalAboutMe isVisible={true} onClose={() => setActiveModal(null)} />}
       {activeModal === 'work' && <ModalWork isVisible={true} onClose={() => setActiveModal(null)} />}
-      {activeModal === 'skills' && <ModalSkills isVisible={true} onClose={() => setActiveModal(null)} />}
+      {activeModal === 'skills' && <ModalSkills isVisible={true} onClose={() => setActiveModal(null)} currentLang={currentLang} />}
       {activeModal === 'game' && <ModalGame isVisible={true} onClose={() => setActiveModal(null)} />}
       {activeModal === 'hire' && <ModalHireMe isVisible={true} onClose={() => setActiveModal(null)} currentLang={currentLang} />}
 

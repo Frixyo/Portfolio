@@ -2,7 +2,7 @@ import { useState } from "react";
 import emailjs from '@emailjs/browser';
 import "./form.css";
 
-export default function Form({currentLang}) {
+function Form({currentLang}) {
   let lang = 0;
   if (currentLang === 'en') {
     lang = 1;
@@ -142,3 +142,5 @@ export default function Form({currentLang}) {
     </div>
   );
 }
+
+export default Form;

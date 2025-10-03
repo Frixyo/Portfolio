@@ -6,17 +6,17 @@ function Commande({ currentLang }) {
     ? [
         ['Esc', 'CV'],
         ['L', 'Linkedin'],
-        ['Entrée', 'Hire Me'],
-        ['S', 'Skills'],
-        ['A', 'About Me'],
-        ['F', 'Game'],
-        ['W', 'Works'],
+        ['Entrée', 'Contactez Moi'],
+        ['S', 'Mes compétences'],
+        ['A', 'À propos de moi'],
+        ['F', 'Jeux'],
+        ['W', 'Mes Projets'],
         ['G', 'GitHub'],
       ]
     : [
         ['Esc', 'Resume'],
         ['L', 'Linkedin'],
-        ['Enter', 'Hire Me'],
+        ['Enter', 'Contact Me'],
         ['S', 'Skills'],
         ['A', 'About Me'],
         ['F', 'Game'],

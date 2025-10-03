@@ -1,0 +1,60 @@
+.skills-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 colonnes */
+  gap: 20px; /* espace entre les cases */
+}
+
+.skills-title {
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.skills-title h2 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.skills-title p {
+  font-size: 1rem;
+  color: #dbe2f7;
+  line-height: 1.4;
+  text-align: justify;
+}
+
+.skills-title img {
+  width: 80px;
+  height: 80px;
+}
+
+/* Responsive : en dessous de 768px on passe en 1 colonne */
+@media (max-width: 768px) {
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-column {
+    min-width: 100%;
+  }
+
+  .skills-title h2 {
+    font-size: 1.3rem;
+  }
+
+  .skills-title p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Très petits écrans (mobile < 480px) */
+@media (max-width: 480px) {
+  .skills-title h2 {
+    font-size: 1.1rem;
+  }
+
+  .skills-title p {
+    font-size: 0.9rem;
+  }
+}
