@@ -27,7 +27,12 @@ L’objectif est de proposer une expérience originale et interactive pour déco
 
 ### 🛠️ TODO
 
-- [ ] **Contact Me** : vérifier que le formulaire est valide et fonctionnel.  
+- [x] **Contact Me** : vérifier que le formulaire est valide et fonctionnel.  
 - [ ] **About Me, Skills, Work & Game** : créer et mettre en forme ces sections.  
+  - [ ] About Me  
+  - [ ] Skills  
+  - [ ] Work  
+  - [ ] Game  
 - [ ] **Responsive Design** : adapter l’interface pour tous les formats d’écrans (PC, tablette, mobile).  
+
 
