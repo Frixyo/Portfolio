@@ -29,10 +29,10 @@ L’objectif est de proposer une expérience originale et interactive pour déco
 
 - [x] **Contact Me** : vérifier que le formulaire est valide et fonctionnel.  
 - [ ] **About Me, Skills, Work & Game** : créer et mettre en forme ces sections.  
-  - [ ] About Me  
+  - [ ] About Me - Design à refaire
   - [x] Skills  
-  - [ ] Work  
-  - [ ] Game  
+  - [ ] Work - Trouver une idée de design
+  - [ ] Game - Jeu de drapeu à faire  
 - [ ] **Responsive Design** : adapter l’interface pour tous les formats d’écrans (PC, tablette, mobile).  
 
 
