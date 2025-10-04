@@ -34,6 +34,7 @@ L’objectif est de proposer une expérience originale et interactive pour déco
   - [ ] Work - Trouver une idée de design
   - [ ] Game - Jeu de drapeu à faire
 - [ ] **Responsive Design** : adapter l’interface pour tous les formats d’écrans (PC, tablette, mobile).
+  - [ ] Main
   - [ ] About Me
   - [x] Skills
   - [ ] Work
