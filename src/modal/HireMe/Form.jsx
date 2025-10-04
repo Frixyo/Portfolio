@@ -18,7 +18,7 @@ function Form({currentLang}) {
         ['Société', 'Company'],
         ['Votre Message', 'Your Message'],
         ['Envoyer', 'Send'],
-        ['Envoyer un mail', 'Send an email'],
+        ['Envoyer un mail : clem.righ@gmail.com', 'Send an email : clem.righ@gmail.com'],
         ['Nom vide !', 'Name empty!'],
         ['Email vide !', 'Email empty!'],
         ['Email invalide !', 'Invalid email!'],

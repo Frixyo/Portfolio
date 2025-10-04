@@ -28,7 +28,7 @@ function ModalSkills({ isVisible, onClose, currentLang}) {
           >
           <button className="close-button" onClick={onClose}>✕</button>
 
-          {currentLang === 'fr' ? <h1>Mes compétences</h1> : <h1>My skills</h1>}
+          {currentLang === 'fr' ? <h1 className="modal-title">Mes compétences</h1> : <h1 className="modal-title">My skills</h1>}
           <Skills currentLang={currentLang} />
 
           </motion.div>

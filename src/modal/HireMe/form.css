@@ -16,7 +16,7 @@
   flex: 1;
   background: rgb(255, 255, 255);
   padding: 20px;
-  width: 10%;
+  width: 90%;
   border-radius: 8px;
 }
 
@@ -74,4 +74,15 @@
   color: red;
   font-weight: bold;
   font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  
+  .form-container {
+    flex-direction: column;
+  }
+
+  .json {
+    display: none;
+  }
 }
