@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "motion/react";
-import "./ModalHireMe.css";
+import "../Modal.css";
 import Form from "./Form.jsx";
 
 function ModalHireMe({ isVisible, onClose, currentLang}) {
@@ -27,7 +27,7 @@ function ModalHireMe({ isVisible, onClose, currentLang}) {
             transition={{ duration: 0.3 }}
           >
           <button className="close-button" onClick={onClose}>✕</button>
-          {currentLang === 'fr' ? <h1 className="modal-title">Contacter moi</h1> : <h1 className="modal-title">Contact me</h1>}
+          {currentLang === 'fr' ? <h1 className="modal-title">Contactez-moi</h1> : <h1 className="modal-title">Contact me</h1>}
           <Form currentLang={currentLang} />
           </motion.div>
         </motion.div>
