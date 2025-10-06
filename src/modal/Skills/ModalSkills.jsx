@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "motion/react";
-import "./ModalSkills.css";
+import "../Modal.css";
 import Skills from "./Skills";
 
 function ModalSkills({ isVisible, onClose, currentLang}) {

@@ -20,7 +20,7 @@
     radial-gradient(circle at top left, #1e1b4b 0%, #000000 100%) padding-box,
     #4418c1 border-box;
   border: 4px solid transparent;
-  width: 75%;
+  width: 80%;
   max-width: 1500px;
   max-height: 80vh;
   overflow-y: auto;
@@ -38,6 +38,10 @@
 .modal-box::-webkit-scrollbar-thumb {
   background-color: #8a2be2;
   border-radius: 10px;
+}
+
+h1{
+  font-size: clamp(2rem, 5vw, 3.5rem);
 }
 
 
@@ -60,3 +64,7 @@
   transform: scale(1.2);
 }
 
+.modal-title {
+  margin-top: 0px;
+  margin-bottom: 20px;
+}

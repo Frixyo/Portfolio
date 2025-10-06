@@ -21,10 +21,10 @@ const [currentLang, setCurrentLang] = useState('fr')
   return (
     <main style={{ position: 'relative', width: '100vw', height: '100vh' }}>
 
-      {activeModal === 'about' && <ModalAboutMe isVisible={true} onClose={() => setActiveModal(null)} />}
-      {activeModal === 'work' && <ModalWork isVisible={true} onClose={() => setActiveModal(null)} />}
+      {activeModal === 'about' && <ModalAboutMe isVisible={true} onClose={() => setActiveModal(null)} currentLang={currentLang} />}
+      {activeModal === 'work' && <ModalWork isVisible={true} onClose={() => setActiveModal(null)} currentLang={currentLang} />}
       {activeModal === 'skills' && <ModalSkills isVisible={true} onClose={() => setActiveModal(null)} currentLang={currentLang} />}
-      {activeModal === 'game' && <ModalGame isVisible={true} onClose={() => setActiveModal(null)} />}
+      {activeModal === 'game' && <ModalGame isVisible={true} onClose={() => setActiveModal(null)} currentLang={currentLang} />}
       {activeModal === 'hire' && <ModalHireMe isVisible={true} onClose={() => setActiveModal(null)} currentLang={currentLang} />}
 
       <div className="title">
@@ -41,13 +41,15 @@ const [currentLang, setCurrentLang] = useState('fr')
               "<h1>Bienvenue sur mon portfolio !</h1>",
               "<p>Je suis Clément Righele, Développeur en génie logiciel !</p>",
               "<p>Cliquez sur les touches du clavier pour interagir avec le site !</p>",
-              "<p>Mon Portfolio n'est pas encore fini, je le complèterai le plus vite possible.</p>"
+              "<p>Mon Portfolio n'est pas encore fini, je le complèterai le plus vite possible.</p>",
+              "<h1>Hello World !</h1>",
             ]
           : [
               "<h1>Welcome to my portfolio!</h1>",
               "<p>I am Clément Righele, Software Engineer!</p>",
               "<p>Click on the keyboard keys to interact with the site!</p>",
-              "<p>My Portfolio is not finished yet, I will complete it as soon as possible.</p>"
+              "<p>My Portfolio is not finished yet, I will complete it as soon as possible.</p>",
+              "<h1>Hello World !</h1>",
             ]
         }
         typingSpeed={85}

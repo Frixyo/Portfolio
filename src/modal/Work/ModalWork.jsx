@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "motion/react";
-import "./ModalWork.css";
+import "../Modal.css";
 
-function ModalWork({ isVisible, onClose }) {
+function ModalWork({ isVisible, onClose, currentLang }) {
   function handleBackdropClick(e) {
     if (e.target === e.currentTarget) {
       onClose();
@@ -26,7 +26,7 @@ function ModalWork({ isVisible, onClose }) {
             transition={{ duration: 0.3 }}
           >
           <button className="close-button" onClick={onClose}>✕</button>
-          <h1>Work</h1>     
+          {currentLang === 'fr' ? <h1 className="modal-title">Mes projets</h1> : <h1 className="modal-title">My Works</h1>}
 
           </motion.div>
         </motion.div>
