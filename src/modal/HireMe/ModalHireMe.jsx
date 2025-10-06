@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "motion/react";
-import "./ModalHireMe.css";
+import "../Modal.css";
 import Form from "./Form.jsx";
 
 function ModalHireMe({ isVisible, onClose, currentLang}) {
