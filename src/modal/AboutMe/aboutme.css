@@ -1,0 +1,277 @@
+
+/* Partie gauche : introduction */
+.part1{
+  display: flex;
+  flex-direction: row;
+}
+
+.part1 .intro{
+    width: 60%;
+    padding-right: 24px;
+}
+
+.part1 .localisation{
+    display: flex;
+    align-items: center;
+    margin: -30px 0px 1rem -5px;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.part1 .localisation span{
+    color: rgba(255, 255, 255, 0.80);
+}
+
+
+.part1 .titre, .part2 .titre, .part3 .titre{
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color:#d8c1ef;
+}
+
+
+/* Partie droite : image + formation */
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.image img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid rgba(138, 43, 226, 0.6);
+    box-shadow:0 0 10px rgba(138, 43, 226, 0.6), 0 0 25px rgba(138, 43, 226, 0.4), 0 0 40px rgba(138, 43, 226, 0.2);
+    transition: all 0.3s ease;
+}
+
+.image img:hover {
+    transform: scale(1.05);
+    box-shadow:0 0 15px rgba(138, 43, 226, 0.8), 0 0 35px rgba(138, 43, 226, 0.6), 0 0 55px rgba(138, 43, 226, 0.4);
+}
+
+
+.part1 .parcours {
+    margin-left: 20px;
+    border-left: 2px solid rgba(255,255,255,0.2);
+    padding-left: 20px;
+}
+
+.part1 .formation{
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.part1 .formation .dot{
+    position: absolute;
+    left: -11px;
+    top: 3px;
+    width: 12px;
+    height: 12px;
+    background: #8a2be2;
+    border-radius: 50%;
+    box-shadow: 0 0 6px #8a2be2;
+}
+
+.part1 .formation .date{
+    color: #d8c1ef;
+    font-size: 0.9rem;
+    margin: 10px;
+}
+
+.part1 .second-titre, .part2 .second-titre{
+    color: #E2E8F0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.part1 .second-titre{
+    margin-left: -12px;
+}
+
+
+/* Partie 2 Gauche : Spécialités */
+.part2{
+    display: flex;
+    flex-direction: row;
+    height: 550px;
+}
+
+.part2 .specialites{
+    width: 60%;
+    margin-left: -12px;
+
+    gap: 200px;
+    
+}
+
+.part2 .second-titre{
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: -12px;
+}
+
+.part2 .spe {
+    background-color: #8a2be2;
+    border-radius: 24px;
+    padding: 2px 0px 4px 1rem;
+    margin-bottom: 15px;
+    color: #fff;
+    height: 100px;
+    transition: all 0.3s ease;
+}
+
+.part2 .spe:hover{
+    transform: scale(1.05);
+}
+
+.part2 .spe .description{
+    height: 40%;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Partie 2 Droite : Technologies */
+
+.part2 .techno{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.part2 .loop-container {
+    height: 470px; 
+    overflow: hidden;
+    margin-left: -100px;
+    margin: auto;
+    border-bottom: 1px solid #fff;
+    border-top: 1px solid #fff;
+}
+
+.part2 .loop-content {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    animation: scrollLoop linear infinite;
+    animation-duration: 60s;
+    will-change: transform;
+}
+
+.part2 .loop-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px 0;
+    font-size: 1rem;
+}
+
+.part2 .loop-item svg {
+    width: 40px;
+    height: 40px;
+}
+
+.part2 .loop-item .categorie {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #d8c1ef;
+}
+
+/* Partie 3 : Au dela du code */
+.part3{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.part3 .outside{
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.part3 .outside .titre{
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color:#d8c1ef;
+}
+
+.part3 .outside .description{
+    font-size: 1.2rem;
+    color: #dbe2f7;
+    line-height: 1.4;
+    max-width: 800px;
+    margin: auto;
+}
+
+
+/* Partie 3 : Random facts */
+.part3 .random{
+    text-align: center;
+}
+
+.part3 .facts{
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+.part3 .facts li{
+    background: rgba(138, 43, 226, 0.6);
+    margin: 5px 0;
+    padding: 10px 10px 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  
+    .part1 {
+        flex-direction: column;
+    }
+    .part1 .intro {
+        width: 100%;
+    }
+    .part1 .intro .localisation {
+        margin: -30px 0px -20px -5px;
+    }
+
+
+    .part2 {
+        flex-direction: column;
+        height: auto;
+    }
+    .part2 .specialites {
+        width: 100%;
+    }
+    .part1 .titre, .part2 .titre {
+        text-align: center;
+    }
+    .part2 .techno {
+        width: 100%;
+    }
+}
+
+
+
+/* Animation fluide de haut en bas */
+@keyframes scrollLoop {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
