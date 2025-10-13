@@ -1,9 +1,8 @@
-
 import "./aboutme.css";
 
 function Random({currentLang}) {
 
-  const lang = currentLang === "fr" ? 1 : 0;
+  const lang = currentLang === "fr" ? 0 : 1;
 
   const traduction = [
     ["Au-delà du code","Beyond the Code"],

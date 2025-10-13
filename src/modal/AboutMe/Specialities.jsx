@@ -11,7 +11,7 @@ import { DiVisualstudio } from "react-icons/di";
 
 function Specialities({currentLang}) {
 
-  const lang = currentLang === "fr" ? 1 : 0;
+  const lang = currentLang === "fr" ? 0 : 1;
 
   const techLogos = useMemo(() => [
     { node: "", title: "Langages" },

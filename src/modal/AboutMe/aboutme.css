@@ -31,6 +31,15 @@
     color:#d8c1ef;
 }
 
+.part1 .titre{
+    font-size: 3rem;
+}
+
+.part1 .description{
+    font-size: 1.6rem;
+    line-height: 1.4;
+    color: #fff;
+}
 
 /* Partie droite : image + formation */
 .image {
@@ -240,12 +249,21 @@
   
     .part1 {
         flex-direction: column;
+        width: 100%;
     }
     .part1 .intro {
         width: 100%;
+        padding-right: 0px;
     }
-    .part1 .intro .localisation {
+    .part1 .titre{
+        font-size: 2rem;
+    }
+    .part1 .localisation {
         margin: -30px 0px -20px -5px;
+    }
+    .part1 .description {
+        text-align: center;
+        font-size: 1.3rem;
     }
 
 
