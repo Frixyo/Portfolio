@@ -3,10 +3,7 @@ import emailjs from '@emailjs/browser';
 import "./form.css";
 
 function Form({currentLang}) {
-  let lang = 0;
-  if (currentLang === 'en') {
-    lang = 1;
-  }
+  const lang = currentLang === "fr" ? 0 : 1;
 
   const [errorNameEmpty, setErrorNameEmpty] = useState("")
   const [errorMailInvalid, setMailInvalid] = useState("")

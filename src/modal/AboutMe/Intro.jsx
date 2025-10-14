@@ -8,7 +8,7 @@ function Intro({currentLang}) {
 
   const traduction = [
     ["Construire des solutions simples pour des besoins complexe", "Building Simple Solutions for Complex Needs"],
-    ["Je suis un étudiant en génie logiciel, animé par la passion d'imaginer et créer. J'essaye de toujours d'innover en transformant la complexité en expériences simples et agréables à utiliser.", "I'm a software engineering student driven by a passion for imagining and creating. I always strive to innovate by transforming complexity into simple and enjoyable user experiences."],
+    ["Je suis un étudiant en génie logiciel, animé par la passion d'imaginer et créer. J'essaye toujours d'innover en transformant la complexité en expériences simples et agréables à utiliser.", "I'm a software engineering student driven by a passion for imagining and creating. I always strive to innovate by transforming complexity into simple and enjoyable user experiences."],
     ['DUT Informatique', 'DUT Computer Science'],
     ['2023 - Présent | ÉTS Montréal, Canada', '2023 - Present | ÉTS Montreal, Canada'],
     ['Baccalauréat en Génie Logiciel', 'Bachelor in Software Engineering'],

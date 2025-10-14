@@ -113,9 +113,7 @@
 .part2 .specialites{
     width: 60%;
     margin-left: -12px;
-
     gap: 200px;
-    
 }
 
 .part2 .second-titre{
@@ -130,7 +128,7 @@
     padding: 2px 0px 4px 1rem;
     margin-bottom: 15px;
     color: #fff;
-    height: 100px;
+    height: auto;
     transition: all 0.3s ease;
 }
 
@@ -273,6 +271,9 @@
     }
     .part2 .specialites {
         width: 100%;
+    }
+    .part2 .spe {
+        padding: 5px 5px 5px 1rem;
     }
     .part1 .titre, .part2 .titre {
         text-align: center;

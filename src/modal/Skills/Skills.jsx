@@ -1,10 +1,7 @@
 import "./skills.css";
 
 function Skills({currentLang}) {
-  let lang = 0;
-  if (currentLang === 'en') {
-    lang = 1;
-  }
+    const lang = currentLang === "fr" ? 0 : 1;
 
     const traductionTitles = [
         ['Créatif', 'Creative'],
