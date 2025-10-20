@@ -102,15 +102,13 @@
     justify-content: center;
   }
 
-  .stats p {
-    flex: 1 1 45%;
-  }
-
   .stats p:nth-child(odd) {
     text-align: left;
+    flex: 1 1 30%;
   }
   .stats p:nth-child(even) {
     text-align: right;
+    flex: 1 1 60%;
   }
 
   .inputgame {

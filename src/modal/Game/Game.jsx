@@ -7,7 +7,7 @@ function Game({currentLang}){
 
     const traduction = [
         ["Jeu de dactylographie","Typing Game"],
-        ["Texte à trouver pour le jeu Texte à trouver pour le jeu Texte à trouver pour le jeu Texte à trouver pour le jeu Texte à trouver pour le jeu Texte à trouver pour le jeu","Texte à trouver pour le jeu"],
+        ["Texte à trouver","Text to type"],
         ["MPM","WPM"],
         ["Temps","Time"],
         ["Fautes","Errors"],
