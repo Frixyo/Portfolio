@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from "motion/react";
 import "../Modal.css";
+import Game from "./Game";
 
 function ModalGame({ isVisible, onClose, currentLang }) {
   function handleBackdropClick(e) {
@@ -27,6 +28,7 @@ function ModalGame({ isVisible, onClose, currentLang }) {
           >
           <button className="close-button" onClick={onClose}>✕</button>
           <h1 className="modal-title">Game</h1>
+          <Game currentLang={currentLang} />
 
           </motion.div>
         </motion.div>

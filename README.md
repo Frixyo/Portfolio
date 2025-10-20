@@ -10,7 +10,6 @@ Il est développé avec **React + Vite**, et déployé via **GitHub Pages** sur 
 
 - [React](https://react.dev/) – bibliothèque JavaScript pour créer l’interface
 - [Vite](https://vitejs.dev/) – outil de build ultra-rapide
-- [GSAP](https://gsap.com/) – animations fluides
 - [Spline](https://spline.design/) – intégration 3D
 - [gh-pages](https://www.npmjs.com/package/gh-pages) – déploiement sur GitHub Pages
 

@@ -1,0 +1,113 @@
+/* Styles for the game modal */
+
+.headergame {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.resetbutton {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #8a2be2;
+  border-radius: 12px;
+}
+
+
+.stats {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+
+.bestscore {
+  transition: color 0.5s ease;
+}
+
+.mot {
+  font-size: 18px;
+  transition: color 0.2s;
+}
+
+.ok {
+  color: #7ae582;
+}
+
+.actuel {
+  color: #4da6ff;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.futur {
+  color: #ccc;
+}
+
+
+.erreur {
+  color: #ff4d4d;
+  font-weight: bold;
+}
+
+.inputcontainer{
+  width: 100%;
+}
+
+.inputgame {
+  width: 100%;
+  height: 30px;
+
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(5px);
+  border: 2px solid rgba(138, 43, 226, 0.5);
+  border-radius: 12px;
+
+  padding: 14px 0px 14px 0px;
+  font-size: 1.3rem;
+  font-family: 'Figtree', sans-serif;
+  line-height: 1.5;
+  color: white;
+
+  text-indent: 14px;
+  scrollbar-width: none;
+  resize: none;
+  outline: none;
+
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inputgame:focus {
+  border-color: #b38fff;
+  box-shadow: 0 0 12px rgba(138, 43, 226, 0.7);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+
+@media (max-width: 768px) {
+
+  .stats{
+    flex-wrap: wrap;  
+    justify-content: center;
+  }
+
+  .stats p {
+    flex: 1 1 45%;
+  }
+
+  .stats p:nth-child(odd) {
+    text-align: left;
+  }
+  .stats p:nth-child(even) {
+    text-align: right;
+  }
+
+  .inputgame {
+    font-size: 1.2rem;
+  }
+}
