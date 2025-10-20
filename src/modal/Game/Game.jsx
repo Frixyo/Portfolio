@@ -134,6 +134,9 @@ function Game({currentLang}){
                 <textarea
                     id="inputgame"
                     className="inputgame"
+                    autoCapitalize="off"
+                    autoCorrect="off"
+                    spellCheck="false"
                     value={textencours} 
                     autoFocus={true}
                     onChange={e => handleChange(e)}

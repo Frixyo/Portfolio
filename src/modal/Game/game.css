@@ -91,6 +91,12 @@
 
 @media (max-width: 768px) {
 
+  .headergame {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
   .stats{
     flex-wrap: wrap;  
     justify-content: center;
