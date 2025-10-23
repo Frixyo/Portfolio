@@ -31,7 +31,7 @@ L’objectif est de proposer une expérience originale et interactive pour déco
   - [x] About Me - Changer la photo
   - [x] Skills
   - [ ] Work - Trouver une idée de design
-  - [ ] Game - Jeu de dactylographie - Faire le texte à taper
+  - [x] Game - Jeu de dactylographie
 - [ ] **Responsive Design** : adapter l’interface pour tous les formats d’écrans (PC, tablette, mobile).
   - [ ] Main
   - [x] About Me
