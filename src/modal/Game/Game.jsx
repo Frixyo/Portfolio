@@ -7,7 +7,7 @@ function Game({currentLang}){
 
     const traduction = [
         ["Jeu de dactylographie","Typing Game"],
-        ["Texte à trouver","Text to type"],
+        ["J'ai commencé plein de projets. Certains fonctionnent, d'autres dorment dans le dossier REPO. Pourtant, à chaque fois que je code j'ai l'impression de lancer une petite fusée. Pas sûr qu'elle atteigne Mars, mais au moins les plans sont dessinés. Parfois seul le moteur existe, parfois elle se crash, et parfois... elle décolle.","I have started many projects. Some work, others are still sleeping in the REPO folder. But every time I code, it feels like launching a tiny rocket. I'm not sure it will reach Mars, but at least the blueprints exist. Sometimes only the engine is created, sometimes it crashes, and sometimes... it takes off."],
         ["MPM","WPM"],
         ["Temps","Time"],
         ["Fautes","Errors"],
@@ -28,8 +28,6 @@ function Game({currentLang}){
 
     const bestScoreClass = isNewBest ? "bestscore ok" : "bestscore";
 
-    
-
     useEffect(() => {
         if (!isRunning) return;
 
@@ -41,6 +39,16 @@ function Game({currentLang}){
         return () => clearInterval(intervalId);
     }, [isRunning, timer]);
 
+    useEffect(() => {
+        const saved = localStorage.getItem("bestScore");
+        if (saved) setBestScore(parseFloat(saved));
+    }, []);
+
+    useEffect(() => {
+        if (bestScore > 0) {
+            localStorage.setItem("bestScore", bestScore);
+        }
+    }, [bestScore]);
 
     function handleSpace() {
         if (nbmot >= text.length) return;
@@ -73,8 +81,6 @@ function Game({currentLang}){
         }
 
     }
-
-
 
     function handleChange(e) {
         if (textencours.trim() === "" && e.target.value.endsWith(" ")) return;
