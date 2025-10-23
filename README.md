@@ -28,7 +28,7 @@ L’objectif est de proposer une expérience originale et interactive pour déco
 - [x] **Redirection CV, GitHub, Linkedin**
 - [x] **Contact Me** : vérifier que le formulaire est valide et fonctionnel.  
 - [ ] **About Me, Skills, Work & Game** : créer et mettre en forme ces sections.  
-  - [x] About Me
+  - [x] About Me - Changer la photo
   - [x] Skills
   - [ ] Work - Trouver une idée de design
   - [ ] Game - Jeu de dactylographie - Faire le texte à taper
